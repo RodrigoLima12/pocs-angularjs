@@ -1,0 +1,1745 @@
+/*
+* APPLICATION VARIABLES
+*/
+$custom-color-1: #30C01E;
+$custom-color-2: #5A5A5A;
+$custom-color-3: #FFA800;
+$custom-color-4: #000000;
+$custom-color-5: #CC0000;
+
+/*cor do link estava sendo sobreposta no breadcrumb*/
+.nsj-breadcrumb>li {
+  text-transform: none !important;
+}
+
+.nsj-breadcrumb a,
+.nsj-breadcrumb .nsj-link {
+  color: $custom-color-1 !important;
+}
+
+.nsj-breadcrumb span {
+  color: #999 !important;
+}
+
+.nsj-alert a,
+.nsj-alert a:hover {
+  color: #fff;
+}
+
+$alert-success: #28a745;
+$alert-warning: #ffa800;
+$alert-info: #17a2b8;
+$alert-danger: #dc3545;
+
+$text-color-muted: #999999;
+
+.btn-success,
+.btn-primary {
+  background-color: #2BAD1B !important;
+  border-color: #E5E5E5 !important;
+}
+
+.btn-color-1:hover,
+.btn-color-1:active,
+.btn-color-1:active:hover,
+.btn-color-1:active:focus,
+.btn-color-1.active,
+.btn-color-1:focus,
+.btn-color-1[disabled],
+.btn-color-1[disabled]:hover,
+.btn-color-1[disabled]:focus,
+.btn-color-1.disabled,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary.active,
+.btn-primary:focus,
+.btn-primary[disabled],
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary.disabled,
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus {
+  background-color: #269A18 !important;
+}
+
+/*
+* NASAJON UI
+*/
+@import "../../../node_modules/nasajon-ui/lib/nasajon-ui.scss";
+@import "../../../node_modules/nasajon-ui/lib/theme.scss";
+@import "./templates/components/nsj-components.scss";
+
+/*
+* DROPZONE
+*/
+@import "./templates/components/ns-dropzone.scss";
+
+/*
+* APPLICATION CSS
+*/
+
+// Novas fontes
+
+html {
+  max-width: none !important;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+
+  h1 {
+    font-size: 40px !important;
+    font-weight: $nsj-font-bold;
+    color: $text-color;
+  }
+
+  h2 {
+    font-size: 32px !important;
+    font-weight: $nsj-font-bold;
+    color: $text-color;
+  }
+
+  h3 {
+    font-size: 26px !important;
+    font-weight: $nsj-font-bold;
+    color: $text-color;
+  }
+
+  h4 {
+    font-size: 24px !important;
+    font-weight: $nsj-font-bold;
+    color: $text-color;
+  }
+
+  h5 {
+    font-size: 18px !important;
+    font-weight: $nsj-font-bold;
+    color: $text-color;
+  }
+
+  h6 {
+    font-size: 16px !important;
+    font-weight: $nsj-font-bold;
+    color: $text-color;
+  }
+
+  .nsj-headline {
+    padding: 0 15px;
+  }
+}
+
+.right-buffer {
+  margin-right: 20px;
+}
+
+//Panels in Dashboard
+.nsj-panel {
+  .panel-heading {
+    background-color: #f5f5f5;
+    color: $text-color;
+    padding: 15px 15px;
+  }
+
+  .panel-body {
+    .list-group-info {
+      flex: 1 66%;
+    }
+
+    .list-group-btns {
+      flex: none;
+    }
+
+    hr {
+      margin-bottom: 15px !important;
+      margin-top: 15px !important;
+    }
+
+    .list-group {
+      margin-bottom: 0 !important;
+    }
+
+    .text-icon {
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+
+      i {
+        color: $custom-color-2;
+        font-size: 16px;
+      }
+
+      h6 {
+        color: $custom-color-1;
+      }
+    }
+  }
+
+  .panel-footer {
+    background-color: #f5f5f5;
+  }
+}
+
+//Ações em Massa
+
+.mass-action-line {
+  align-items: center;
+  border: none;
+  display: flex;
+  float: left;
+  height: 35px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.mass-action {
+  color: $text-color;
+  float: left;
+  padding-left: 15px;
+
+  i {
+    cursor: pointer;
+  }
+
+  &:first-of-type {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+
+  &:last-of-type {
+    color: $custom-color-1;
+    padding-left: 20px;
+    margin: auto 0;
+  }
+}
+
+//
+
+.full-view {
+  padding-right: 0;
+}
+
+.fixedSidebar {
+  #nsj-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .navbar-brand img {
+      height: 40px !important;
+      width: auto !important;
+    }
+  }
+}
+
+// icon button
+.btn.btn-icon {
+  background-color: transparent;
+  color: #000;
+}
+
+.btn.btn-icon.disabled {
+  color: #666;
+}
+
+.checkmark.disabled {
+  cursor: not-allowed;
+  background-color: #ddd;
+}
+
+.custom-checkbox:hover input~.checkmark.disabled {
+  background-color: #ddd;
+}
+
+.table-empty .tree-grid {
+  margin-bottom: unset;
+}
+
+.empty-message {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.margin-bottom-unset {
+  margin-bottom: 0;
+}
+
+// Coloca primeira letra em maiúsculo
+.capitalize {
+  text-transform: capitalize;
+}
+
+// Header adequado ao protótipo
+.full-page-wrapper {
+  padding: 0 15px;
+}
+
+.page-header-wrapper {
+  padding: 15px 15px 5px 15px;
+
+  .header-title-wrapper {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      margin: 10px 10px 10px 0;
+      display: inline-block;
+    }
+
+    h3 a {
+      color: #5a5a5a;
+      font-size: 22px;
+      margin-right: 12px;
+    }
+
+    nsj-label,
+    nsj-button {
+      margin-bottom: 12px;
+    }
+
+    nsj-label {
+      font-size: 11px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      line-height: 18px;
+    }
+
+  }
+
+  .list-inline {
+    margin: 10px 0 0;
+
+    .form-group {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .page-header-wrapper {
+    .action-buttons-wrapper {
+      border-top: 1px solid #DDDDDD;
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
+      width: 100%;
+      background: #fff;
+      padding: 15px 0;
+      left: 0;
+
+      .list-inline {
+        margin: 0 10px;
+        float: right;
+      }
+    }
+  }
+}
+
+// FIM - Header adequado ao protótipo
+
+// Wrapper necessário ao Componente Switch
+.switch-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  align-items: flex-end;
+}
+
+.switch-wrapper span {
+  font-weight: bold;
+  width: 100%;
+}
+
+.switch-wrapper .nsj-switch {
+  width: 50px !important;
+  margin-bottom: 0;
+}
+
+.switch-wrapper .nsj-switch span {
+  width: 40px !important;
+}
+
+// FIM - Wrapper necessário ao Componente Switch
+
+// Loading tela inteira
+.content-loading.ajusta-flex {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+
+  .center-loading {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: contents;
+
+    .txt-loading {
+      margin-left: 10px;
+    }
+  }
+}
+
+.content-loading.ajusta-flex div {
+  text-align: center;
+}
+
+.content-loading.ajusta-flex .onloading {
+  position: static;
+  display: inline-block;
+}
+
+.form-loading-layout-wrapper {
+  position: relative;
+}
+
+.form-loading-layout-wrapper-body .body {
+  position: relative;
+}
+
+.form-loading-layout-wrapper .content-loading,
+.form-loading-layout-wrapper-body .content-loading {
+  height: 100%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+// FIM - Loading tela inteira
+
+// Subtítulo para seção de formulário
+.frm-section-subtitle-separator-wrapper {
+  position: relative;
+}
+
+.frm-section-subtitle {
+  color: #ccc;
+  font-size: 16px;
+  position: absolute;
+  font-weight: bold;
+  top: 7px;
+  background-color: #fff;
+  padding-right: 8px;
+
+  @media only screen and (max-width: 767px) {
+    //Ajustar título da seção
+    top: -15px;
+  }
+}
+
+// FIM - Subtítulo para seção de formulário
+
+// Ajuste espaçamento
+.nsj-table.nsj-table.table td,
+.nsj-table.table th {
+  padding: 8px 15px;
+}
+
+// FIM - Ajuste espaçamento das laterais da table
+
+// adicionar 'nsj-modal-lg' ao windowClass do modal para que a modal fique maior
+@media only screen and (min-width: 992px) {
+  .nsj-modal-lg .modal-dialog {
+    width: 900px;
+    height: 500px;
+  }
+
+  .nsj-modal-lg .modal-content {
+    height: 600px;
+  }
+
+  .nsj-modal-lg .modal-body {
+    height: 450px;
+  }
+
+  .nsj-modal-lg embed,
+  .nsj-modal-lg img {
+    height: 410px;
+    max-height: 100%;
+  }
+}
+
+// FIM - Ajuste tamanho modal preview
+
+// Ajuste para na mass action line não sobrar
+// linha da coluna para fora da linha superior da div
+// e para mostrar border à direita
+.mass-action-line.mass-action-line-padding-top {
+  padding-top: 10px;
+  margin-bottom: 0;
+  border-left: 1px solid #ddd;
+}
+
+// Ajuste na tabela para o total se adequar ao layout
+.table-total {
+  background: #CECECE;
+  padding: 12px 15px;
+}
+
+// layout botão dropzone
+.dz-message {
+  i {
+    font-size: 25px;
+  }
+
+  .dz-button {
+    background: transparent;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+// FIM - layout botão dropzone
+
+// Ajuste tabela tarifas
+.table-total-externo-alinhado {
+
+  tr td:nth-last-child(2),
+  tr th:nth-last-child(2) {
+    text-align: right;
+  }
+}
+
+.table-total-externo-alinhado-show {
+
+  tr td:last-child,
+  tr th:last-child {
+    display: none;
+  }
+
+  tr td:nth-last-child(2),
+  tr th:nth-last-child(2) {
+    text-align: right
+  }
+}
+
+// FIM - Ajuste tabela tarifas
+
+// Ajuste espaçamento botões lista
+.list-group-btns-btn {
+  margin: 0 6px;
+}
+
+// Necessitando espaço no final da tela
+.last-card-margin {
+  margin-bottom: 72px !important;
+}
+
+nsj-accordion {
+  margin-bottom: 15px !important;
+
+  h4 {
+    font-size: calc(1em) !important;
+  }
+}
+
+.layout-table {
+  .mass-action {
+    padding: 0 15px 0 0;
+  }
+}
+
+.nsj-table {
+
+  // Ajuste espaçamento
+  &.nsj-table.table {
+    border-top: 1px solid #ddd;
+
+    td,
+    th {
+      padding: 8px 15px;
+    }
+  }
+
+  &.nsj-table.table.bulk-actions {
+    tr {
+      td:first-child {
+        padding-right: 8px !important;
+      }
+    }
+  }
+
+  // FIM - Ajuste espaçamento das laterais da table
+  th {
+    background-color: #eaeaea !important;
+    color: #5a5a5a !important;
+    font-size: 12px !important;
+  }
+
+  thead tr {
+    height: 35px !important;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tbody tr {
+    &.tree-grid-row.level-1 td:nth-of-type(3) {
+      color: #5a5a5a;
+    }
+
+    &.tree-grid-row.level-2 td:nth-of-type(3) td {
+      &:first-child {
+        label.custom-checkbox {
+          top: -1px;
+        }
+      }
+    }
+  }
+
+  nsj-label {
+    text-transform: uppercase;
+  }
+}
+
+.geral {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  background: rgba(230, 230, 230, 0.2) !important;
+}
+
+/*
+Páginas de erro
+*/
+.sem-menu {
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-title {
+  color: #30C01E;
+}
+
+.error-message {
+  padding: 20px;
+  width: 70%;
+}
+
+.error-code {
+  font-weight: bold;
+  font-size: 0.8em;
+  color: #bbb;
+}
+
+.m-tb-10 {
+  margin: 10px 0;
+}
+
+.nsj-app-load {
+  >.load-area {
+    background-color: transparent !important;
+
+    >.app-load-icon {
+      background-image: url('https://s3.sa-east-1.amazonaws.com/imagens.nasajon/logos/nasajon/nova-marca/loader-nasajon.gif') !important;
+    }
+  }
+}
+
+.nsj-app-load .load-area::before {
+  background: transparent !important;
+}
+
+.select-trabalhador {
+  float: inline-end;
+  display: block;
+}
+
+
+.custom-dist-action {
+  padding-bottom: 15px;
+}
+
+.custom-dist-span {
+  padding-bottom: 10px;
+}
+
+.mass-action-line {
+  align-items: center;
+  border-right: none;
+  border-left: none;
+  float: none;
+  height: 44px;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #fff;
+  margin-right: 0px;
+
+  .mass-action {
+    margin-right: 0px;
+
+    // i  {
+    //   margin-top: -8px;
+    // }
+    &:first-of-type {
+      border-right: 1px solid #ddd;
+      height: 24px;
+      height: -webkit-fill-available;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &:last-of-type {
+      //indicador de quantidade de itens selecionados
+      color: #5a5a5a;
+    }
+
+    &.custom-dist-action,
+    &.custom-dist-span {
+      padding: 0 10px !important;
+    }
+
+    .custom-checkbox {
+      &.checkbox {
+        margin: 0;
+        height: 16px;
+
+        .checkbox label {
+          min-height: auto;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+
+.custom-dist-action {
+  padding-bottom: 0px;
+}
+
+.height-full .row {
+  clear: both;
+}
+
+.disabledColor {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.marginIcon {
+  padding-right: 5px;
+}
+
+.back-link {
+  padding-right: 8px;
+}
+
+.textFont {
+  font-weight: 700;
+}
+
+.padding-First {
+  margin-left: 8px;
+}
+
+.link-sistema {
+  color: #30C01E;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 991px) {
+  nsj-action {
+    a {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+
+/* INÍCIO WIZARD DE FÉRIAS */
+
+.wizard-container {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  padding: 20px;
+  margin: 20px 0;
+
+  .wizard-title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+
+    select {
+      width: 30%;
+    }
+
+    span {
+      color: #d9d9d9;
+      font-size: 1.2em;
+    }
+
+    .divider {
+      flex-grow: 1;
+      border-bottom: 1px solid #d9d9d9;
+      margin: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    .wizard-title {
+      display: block;
+
+      span {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      select {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .wizard-body {
+    .ferias-panel-heading {
+      font-size: 18px;
+      font-weight: bold;
+      color: #5a5a5a;
+      border: 1px solid #ddd;
+      border-radius: 5px 5px 0 0;
+      padding: 15px 25px;
+    }
+
+    .panel-light-gray {
+      background-color: #f5f5f5;
+    }
+
+    .nova-solicitacao {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+
+      p {
+        padding-top: 10px;
+      }
+    }
+
+    .nsj-color-card p {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .ferias-card {
+      height: 93px;
+      min-width: 189px;
+    }
+
+    div.text {
+      margin-top: 0;
+    }
+
+    span.info {
+      display: block;
+      font-size: 0.8em;
+      margin-bottom: -5px;
+      margin-top: 3px;
+    }
+
+    span.value {
+      display: block;
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-bottom: -10px;
+    }
+  }
+
+  progress {
+    display: inline-block;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: stretch;
+    height: 2px;
+    margin: 0 -15px 0 -50px;
+    background: 0;
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  progress::-moz-progress-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  progress::-webkit-progress-value {
+    background-color: #fff;
+  }
+
+  progress::-moz-progress-value {
+    background-color: #fff;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .card-title {
+      display: block;
+
+      select {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+
+    .divider {
+      display: none;
+    }
+
+    .wizard-body {
+      display: block;
+    }
+  }
+
+  .txt-align-center {
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .align-center {
+      display: flex;
+      align-items: center;
+    }
+
+    .inner-scroll {
+      max-height: 50vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .overflowy-hidden-sm {
+      overflow-y: hidden;
+    }
+  }
+}
+
+.saiba-mais {
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.wizard-actions {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+  padding: 2rem 4rem;
+}
+
+.table-ferias {
+  table {
+    tr {
+
+      td,
+      th {
+        border: 1px solid #ddd;
+      }
+
+      @media only screen and (max-width: 991px) {
+        td {
+          &:before {
+            padding-right: 0px !important;
+          }
+
+          div.nsj-table-cust-collumn-wrapper {
+            display: block !important;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-ferias .nsj-table.table.btns-actions tbody tr td:last-child {
+  padding: 0 !important;
+  border: 0;
+  width: 0;
+  min-width: 0;
+}
+
+nsj-table>table>thead>tr>th:last-child {
+  padding: 0 !important;
+}
+
+nsj-table>table>tbody>tr>td.actions.ng-binding {
+  padding: 0 !important;
+}
+
+nsj-table.table-ferias>table>tbody>tr>td:first-child {
+  @media only screen and (max-width: 991px) {
+    &:before {
+      padding-right: 8px;
+      padding-bottom: 5px;
+      font-weight: $nsj-font-bold;
+      content: attr(data-label) !important;
+      display: inline !important;
+    }
+  }
+}
+
+.padding-40 {
+  padding: 40px;
+}
+
+.disable {
+  cursor: not-allowed !important;
+}
+
+// Início - Ações em Massa
+.mass-action-line.mass-action-line-padding-top {
+  // Ajustar altura
+  // e para mostrar border à direita
+  padding-bottom: 4px;
+  margin-bottom: 0;
+  height: 45px;
+  border-left: 1px solid #ddd;
+}
+
+nsj-table.table-ferias>table>tbody>tr>td:last-child {
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .nsj-table.table.btns-actions tbody tr .table-btns-actions .actions-list {
+    display: flex;
+  }
+}
+
+.aviso {
+  display: flex;
+  align-items: baseline;
+  color: white;
+
+  span.dottedUnderline {
+    border-bottom: 1px dotted;
+    cursor: pointer;
+  }
+
+  div {
+    padding-left: 10px;
+  }
+}
+
+/* FIM WIZARD DE FÉRIAS */
+
+/* INÍCIO DOCUMENTOS OBRIGATÓRIOS */
+
+.alert-config,
+.alert-anexos {
+  color: #FFFFFF;
+  display: flex;
+
+  .alert-icone {
+    margin-right: 10px;
+  }
+
+  .alert-icone,
+  .alert-texto {
+    align-self: stretch;
+  }
+
+  .alert-heading {
+    font-size: 18px;
+    margin-top: -4px;
+  }
+}
+
+.alert-config {
+  background-color: #EC971F;
+}
+
+.alert-anexos {
+  background-color: #31B0D5;
+}
+
+.min-height-100 {
+  min-height: 100px;
+}
+
+.margin-top-40 {
+  margin-top: 40px
+}
+
+.anexo-title {
+  font-size: 18px;
+  width: 100%;
+  font-weight: bold;
+  margin: 15px 15px 20px 0;
+  color: #CCCCCC;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+
+  & span {
+    margin: 0 5px 0 0;
+  }
+
+  &::after {
+    margin-top: 13px;
+    background: #CCCCCC;
+    height: 1px;
+    flex: 1;
+    content: '';
+  }
+}
+
+dropzone {
+  display: block;
+}
+
+.dropzone-box {
+  border-radius: 5px;
+  border: 1px solid #DDD;
+
+  .dropzone-upload {
+    height: 200px;
+    background: #E7E7E7;
+    padding: 30px;
+    position: relative;
+    display: block;
+
+    #dropzoneanexo {
+      border-color: #CCCCCC;
+      background: #E7E7E7;
+    }
+
+    &:hover .dropzone-actions {
+      visibility: visible;
+    }
+
+    .dropzone-actions {
+      background: rgba(0, 0, 0, 0.8);
+      visibility: hidden;
+      padding: 14px 0 10px 0;
+      position: absolute;
+      width: 100%;
+      margin-left: -30px;
+      bottom: 0px;
+      z-index: 10000;
+
+      ul {
+        margin: 0 15px 0 10px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          margin: 0 13px;
+          display: inline-block;
+          font-size: 10px !important;
+
+          a {
+            color: #FFF;
+
+            &:hover {
+              color: #30C01E;
+            }
+          }
+
+          a.disable {
+            cursor: not-allowed !important;
+          }
+        }
+      }
+    }
+
+    .dropzone {
+      width: 100%;
+      background: transparent;
+
+      .dz-withoutthumbnail {
+        margin: 0 !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        -moz-transform: translate(-50%, -50%) !important;
+        -webkit-transform: translate(-50%, -50%) !important;
+        font-weight: 300 !important;
+        color: #999 !important;
+        font-size: 12px;
+        text-transform: uppercase !important;
+        width: 80%;
+        text-align: center;
+      }
+
+      .dz-message {
+        width: 80%;
+      }
+
+      .dz-image {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: #E7E7E7;
+
+        img {
+          max-width: 100%;
+          width: auto;
+          display: inline-block;
+          height: 100%;
+        }
+      }
+
+      .dz-preview {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+      }
+
+      .dz-progress {
+        display: none !important;
+      }
+    }
+  }
+
+  .dropzone-message {
+    padding: 20px 30px;
+
+    .dropzone-texto {
+      top: 2px !important;
+      margin-right: 5px !important;
+    }
+
+    .dropzone-requerido {
+      border-radius: 2px;
+      padding: 6px 6px 2px 6px;
+      border: 1px solid #888;
+      text-transform: uppercase;
+      font-size: 12px;
+      top: -2px !important;
+    }
+
+    .dropzone-instrucoes {
+      margin-top: 5px;
+      font-size: 11px;
+      font-style: italic;
+      color: #999;
+    }
+  }
+
+  .dropzoneuploadfalse {
+    display: none;
+  }
+
+  .dropzoneblockfalse {
+    display: inline-block;
+  }
+
+  .dropzoneuploadtrue {
+    display: inline-block;
+  }
+
+  .dropzoneblocktrue {
+    display: none;
+  }
+}
+
+/* FIM DOCUMENTOS OBRIGATÓRIOS */
+
+// Responsividade de férias ao abrir o menu no modo web
+.fixedSidebar.sidebarStatic.sidebarOpen .geral {
+  @media screen and (min-width: 992px) and (max-width: 1238px) {
+    .toggle-menu-open {
+      min-width: 576px;
+      width: 100%;
+      max-width: 992px;
+    }
+  }
+}
+
+/* INÍCIO - Ajustes cores nova marca */
+.nsj-table.table td,
+.nsj-table.table th {
+  border-bottom-color: #E5E5E5;
+}
+
+.actions-buttons ul.actions-list li.action .btn:hover,
+.actions-buttons .action .btn:hover i {
+  color: #30C01E !important;
+}
+
+/* FIM - Ajustes cores nova marca */
+
+/* INÍCIO - Formulário */
+.form-obrigatorio {
+  color: #CF3E4C;
+}
+
+/* FIM - Formulário */
+
+/* INÍCIO - mini-loader */
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border-top: 2px solid #FFA800;
+  border-right: 2px solid transparent;
+  animation: spinner .6s linear infinite;
+}
+
+/* FIM - Formulário */
+
+/* INÍCIO - Ajustes mobile */
+@media only screen and (max-width: 991px) {
+  .label {
+    line-height: 18px;
+  }
+
+  .float-left-mobile {
+    float: left !important;
+    margin-top: 15px;
+
+    .list-group-btns-btn:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .padding-First {
+    margin-left: 0;
+  }
+
+  .nsj-table tbody td:first-child,
+  .nsj-table tbody td,
+  .nsj-table.bulk-actions tbody td:nth-of-type(2) {
+    font-size: 14px;
+
+    span:first-child {
+      font-weight: bold;
+    }
+
+    div span {
+      font-weight: normal !important;
+    }
+
+    div span.label {
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .actions-buttons {
+      margin-bottom: 10px;
+    }
+  }
+
+  .set-bottom-navigation {
+    position: fixed;
+    z-index: 999;
+    bottom: 10px;
+    right: 10px;
+
+    .dropdown-menu {
+      bottom: 100%;
+      top: auto;
+      right: 0;
+      left: auto;
+    }
+  }
+
+  .mobile-bottom-button-wrapper {
+    background-color: #FAFAFA;
+    height: 50px;
+    position: fixed;
+    display: block;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+    border-top: 1px solid #d6d6d6;
+  }
+
+  .mobile-margin-bottom-50 {
+    margin-bottom: 50px !important;
+  }
+
+  .mobile-margin-bottom-65 {
+    margin-bottom: 65px !important;
+  }
+
+  .mobile-margin-bottom-75 {
+    margin-bottom: 75px !important;
+  }
+
+  // sol. VTs
+  .table-total-externo-alinhado tr td:nth-last-child(2),
+  .table-total-externo-alinhado tr th:nth-last-child(2),
+  .table-total-externo-alinhado-show tr td:nth-last-child(2),
+  .table-total-externo-alinhado-show tr th:nth-last-child(2) {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .dropzone-box .dropzone-upload {
+    padding: 15px;
+  }
+
+  .dropzone-box .dropzone-upload .dropzone-actions {
+    margin-left: -15px;
+  }
+
+  .mass-action-span-smaller {
+    font-size: 11px;
+  }
+}
+
+/* FIM - Ajustes mobile */
+
+
+/* Blip chat css*/
+
+#blip-chat-container #blip-chat-open-iframe {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  position: fixed;
+  width: 4%;
+  max-width: 60px;
+  min-width: 48px;
+  max-height: 60px;
+  min-height: 48px;
+  right: 35px;
+  bottom: 60px;
+  transition: transform 200ms, opacity 500ms, visibility 500ms;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), 0 2px 32px rgba(0, 0, 0, 0.1);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wizard-filter-container {
+  padding: 15px;
+  background: white;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.text-bold {
+  font-weight: 700 !important;
+  color: $custom-color-2 !important;
+}
+
+// INICIO - scroll no body na seção de solicitações
+.body-scroll{
+  height: 90ch;
+  width: 100%;
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  @media (max-width: 768px) {
+      width: 100%;
+      overflow-y: scroll;
+      padding-bottom: 30ch;
+      margin-bottom: 10ch;
+  }
+  @media (max-height: 914px) {
+      height: 80ch;
+  }
+  @media (max-height: 896px) {
+      height: 70ch;
+  }
+  @media (max-height: 780px) {
+      height: 61ch;
+  }
+  @media (max-height: 700px) {
+      height: 55ch;
+  }
+  @media (max-height: 667px) {
+      height: 50ch;
+  }
+}
+
+@media screen and (max-width: 1199px)  {
+  .center-horizontal {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.buttongrp-filter {
+  border-left: 1px solid #ddd;
+}
+
+// início - personalização de cards para tela de listagem de processos
+.card-processos-content{
+  display: flex;
+}
+
+.card-processos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 10px;
+  width: 20vw;
+  min-height: 23vh;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+
+  @media (max-width: 1331px) {
+    width: 25vw;
+    min-height: 26vh;
+  }
+
+  &__header {
+    display: flex;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--botoes {
+      display: flex;
+
+      nsj-button {
+        margin: 5px;
+      }
+
+      @media (max-width: 1150px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 600;
+
+    @media (max-width: 960px) {
+      font-size: 16px;
+    }
+  }
+}
+// fim - personalização de cards para tela de listagem de processos
+
+
+// início - personalização de cards para tela de visualização de validação de arquivos/relatórios
+.card-relatorios {
+  margin-bottom: 10px;
+  height: 60vh;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  @media (min-height: 560px) {
+    height: 63vh;
+  }
+
+  @media (min-height: 670px) {
+    height: 68vh;
+  }
+
+  @media (min-height: 820px) {
+    height: 75vh;
+  }
+
+ &__content-right {
+    @media (max-width: 768px) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  &__body-left {
+    flex: 1;
+    overflow: auto;
+    height: 52vh;
+
+    &--item {
+      flex: 1;
+      padding: 10px;
+    }
+
+    &--item:hover {
+      cursor: pointer;
+      background-color: #EAF9E8;
+    }
+
+    .card__item-selected {
+      background-color: #EAF9E8;
+    }
+  }
+
+  &__body-right {
+    background-color: #E7E7E7;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+
+    &--arquivo {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+
+      object {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .relatorios-loading {
+        position: absolute;
+      }
+    }
+  }
+
+  &__footer {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 5px;
+  }
+
+  &__text {
+    display: flex;
+    font-size: 16px;
+    margin: 5px 0 5px 10px;
+    align-items: center;
+
+    i {
+      margin-right: 15px;
+    }
+    strong {
+      margin-right: 5px;
+    }
+  }
+
+  &__button {
+    margin-left: 15px;
+  }
+}
+
+.lista-relatorios-container {
+  display: flex;
+  align-items: center;
+
+  &__content {
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.centralizar-loading-relatorios {
+  justify-content: center;
+}
+
+.relatorios-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+
+  &__content {
+    text-align: center;
+  }
+}
+// fim - personalização de cards para tela de visualização de validação de arquivos/relatórios
+
+.relatorios-footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.btn-tertiary {
+  padding: 6px 12px;
+  color: $custom-color-1;
+  font-weight: 400;
+  cursor: pointer;
+  &:hover {
+      color: $custom-color-1;
+      text-decoration: none;
+  }
+}
+.btn-tertiary.danger {
+  color: $custom-color-5;
+  &:hover {
+      color: $custom-color-5;
+  }
+}

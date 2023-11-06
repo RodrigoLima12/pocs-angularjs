@@ -1,0 +1,12 @@
+<div class="nsj-form-view">
+    <div class="row row-form-view" ng-repeat="(key, value) in $ctrl.entity">
+      <div class="col-sm-12">
+        <div class="form-group clearfix">
+          <label class="control-label">{{key}}</label>
+          <p class="form-control-static">
+             <a class="input form-control-static" readonly href="{{$ctrl.link.href}}" target="{{$ctrl.link.target}}">{{value}}</a>
+          </p>
+        </div>
+      </div>
+    </div>               
+</div>  

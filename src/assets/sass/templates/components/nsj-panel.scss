@@ -1,0 +1,45 @@
+.nsj-panel {
+    .panel-heading {
+        background-color: #f5f5f5;
+        color: $text-color;
+        padding: 15px 15px;
+    }
+
+    .panel-body {
+        hr {
+            margin-bottom: 15px !important;
+            margin-top: 15px !important;
+        }
+
+        .list-group {
+            margin-bottom: 0 !important;
+        }
+
+        i {
+            color: $text-color;
+            font-size: 14px;
+
+            &:first-of-type {
+                vertical-align: middle;
+            }
+        }
+
+        h6 {
+            color: $custom-color-1;
+        }
+    }
+
+    .panel-footer {
+        background-color: #f5f5f5;
+    }
+}
+
+.panel {
+    border: unset;
+    background-color: unset;
+}
+
+.subtitle-card-home {
+    color: #30C01E;
+    font-weight: 700;
+}

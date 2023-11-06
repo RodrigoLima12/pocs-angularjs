@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@core/*": ["src/app/core/", "src/app/core/*"],
+      "modules/*": ["src/app/modules/*"],
+      "@Shared/*": ["src/app/shared/*"],
+      "@utils/*": ["src/app/utils/*"],
+      "@enum/*": ["src/app/enum/*"]
+    },
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "target": "ES5",
+    "lib": ["es5", "es6", "dom", "ESNext"]
+  },
+  "include": ["assets", "config", "src/app"]
+}

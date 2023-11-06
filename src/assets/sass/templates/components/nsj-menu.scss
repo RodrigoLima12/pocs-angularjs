@@ -1,0 +1,26 @@
+.fixedSidebar {
+  #nsj-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+// Menu Contextual
+.menu-contextual-info{
+    display: none;
+}
+
+.fixedSidebar.sidebarOpen .menu-contextual-info{
+    display: block!important;
+}
+
+.fixedSidebar.sidebarStatic.sidebarOpen .geral {
+  margin-left: 270px !important;
+  width: calc(100% - 270px);
+}
+
+
+.fixedSidebar .nsj-menu .sidebar-content .wrap-menu .primary-nav .nav li a .angle{
+    top:10px;
+}

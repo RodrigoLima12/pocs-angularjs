@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - nohup dockerd-entrypoint.sh
+  build:
+    commands:
+      - dck_build -i nasajon/yarn:1.9.4 -c "yarn install"
+      - dck_build -i nasajon/yarn:1.9.4 -c "node node_modules/.bin/webpack" -e "-v $PWD:/build -e NODE_ENV=production"
+  post_build:
+    commands:
+      - dck_ship pocs-angularjs
+#      - deploy -a meutrabalho-frontend -n meutrabalho -p frontend -t deployment

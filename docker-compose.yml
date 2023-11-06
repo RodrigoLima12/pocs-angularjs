@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+    webpack:
+        image: "nasajon/yarn"
+        working_dir: /home/node/app
+        environment:
+            - NODE_ENV=dev
+            # - CHOKIDAR_USEPOLLING=true
+        volumes:
+            - ./:/home/node/app
+            - ~/.ssh/:/root/.ssh/
+        ports:
+            - "9000:9000"
+        command: "node node_modules/.bin/webpack-dev-server --host 0.0.0.0 --hot --inline"

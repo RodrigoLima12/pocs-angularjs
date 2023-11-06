@@ -1,0 +1,240 @@
+//Ajustes de layout componente ns-dropzone
+ns-dropzone{
+    .btn-add-file{
+        float: right;
+        margin-bottom: 5px;
+    }
+  
+    //Template de layout do arquivo dropzone, deixo invisível
+    .preview-template-dropzone{
+        display: none;
+    }
+  
+    //Componente Dropzone
+    .dropzone{
+        float: left;
+        width: 100%;
+  
+        //Caso possua algum anexo, ou esteja fazendo o upload de algum, deixo sem borda e removo mensagem padrão
+        &.possuianexos, &.dz-started{
+            border: none;
+  
+            .dz-default.dz-message{
+                display: none;
+            }
+        }
+  
+        //Preview do anexo
+        .dz-preview{
+            //Tamanho do preview do anexo
+            height: 160px;
+            width: 200px;
+  
+            //Apresentação inicial do anexo
+            .dz-image{
+                height: 100% !important;
+                width: 100% !important;
+                border-radius: 4px !important;
+                border: 1px solid #d0cece78;
+  
+                .container-imagem{
+                    height: 80%;
+                    width: 100%;
+                    border-bottom: 1px solid #dddddd;
+                    text-align: center;
+                    background-color: #dddddd;
+                    display: flex;
+                    justify-content: center;
+                    overflow: hidden;
+  
+                    .icon-file{
+                        display: none;
+                        font-size: 80px;
+                        color: #c9c8c8;
+                    }
+  
+                    //Imagem preview do anexo enviado, caso seja foto
+                    img{
+                        //Imagem proporcional
+                        object-fit: cover;
+  
+                        //Caso não tenha carregado direito, ou seja um arquivo, não apresento imagem
+                        &.erro-carregamento, &.file{
+                            display: none;
+  
+                            & + .icon-file{
+                                display: block;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+  
+                //Informações sobre o anexo: Nome e ícone de status
+                .info-anexo{
+                    height: 20%;
+                    font-size: 12px;
+                    display: inline-flex;
+  
+                    //Nome do anexo: Caso passe do tamanho, escondo o excedente
+                    .nome-anexo{
+                        display: inline-block;
+                        padding-left: 2px;
+                        text-align: left;
+  
+                        //Referente a limitar o texto, adicionando '...' no final
+                        max-width: 170px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+  
+                    //Os ícones não devem aparecer, até que aconteça o sucesso ou erro do envio
+                    .icon-sucesso, .icon-erro{
+                        display: none;
+                        padding: 0 4px;
+                        font-size: 15px;
+                    }
+  
+                    //Ícone de status sucesso
+                    .icon-sucesso{
+                        color: #5db75d;
+                    }
+                    //Ícone de status erro
+                    .icon-erro{
+                        color: #d8534f;
+                    }
+                }
+            }
+  
+            //Apresentação do anexo ao passar o mouse(hover)
+            .dz-details{
+                background-color: #dcdcdc !important;
+                height: 100%;
+                border-radius: 4px;
+                padding: 0 !important;
+  
+                //Informações sobre o anexo apresentadas no detalhe
+
+  
+                //Ações referentes ao anexo
+                .acoes-anexo{
+                    height: 50%;
+                    padding: 20px 6px 0 6px !important;
+  
+                    //Estilo de cada ação do anexo
+                    .acao-anexo{
+                        position: relative;
+                        display: inline-block;
+                        padding: 3px 7px;
+                        border-radius: 2px;
+                        background-color: #5f5f5f;
+                        color: #fff;
+                        font-size: 18px;
+                        margin: 3px 4px;
+  
+                        //Caso possua link, removo estilização padrão
+                        a {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+  
+                        .acao-label-container{
+                            position: absolute;
+                            display: none;
+                            margin-top: 3px;
+                            margin-left: calc(50% - 50px); //50% do pai - metade do tamanho do container(100px), deixa centralizado
+                            top: 100%;
+                            left: 0;
+                            justify-content: center;
+                            width: 100px;
+                            background: transparent;
+  
+                            .acao-label{
+                                padding: 2px 4px;
+                                border-radius: 2px;
+                                background: #5f5f5f;
+                                width: max-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                            }
+                        }
+  
+                        //Ao passar o mouse por cima da ação, apresento o label descritivo
+
+                    }
+                }
+            }
+  
+            //Botão de erro apresentando por padrão, deixo ele invisível
+            .dz-remove{
+                display: none !important;
+            }
+  
+            //Na Apresentação inicial do anexo, mostrar ícone de sucesso
+            .dz-image .info-anexo .icon-sucesso{
+                display: inline-block;
+            }
+  
+            //Ação de cancelar upload inicia invisível, só aparecendo caso seja um novo anexo sendo enviado
+            .dz-details .acoes-anexo .acao-anexo.acao-cancelar-upload{
+                display: none;
+            }
+  
+            //Novos anexos sendo enviado, sem ser os que vem do banco
+            &.dz-processing{
+                //Ação de excluir arquivo inicia invisível, só aparecendo quando o upload terminar(com sucesso ou erro)
+                .dz-details .acoes-anexo .acao-anexo{
+                    &.acao-excluir{
+                        display: none;
+                    }
+                    &.acao-cancelar-upload{
+                        display: inline-block;
+                    }
+                }
+  
+                /* Caso o upload tenha terminado, com sucesso ou erro, apresento botão de excluir e
+                   torno invisível botão de cancelar upload */
+                &.dz-error, &.dz-success, &.dz-complete{
+                    .dz-details .acoes-anexo .acao-anexo.acao-excluir{
+                        display: inline-block;
+                    }
+                    .dz-details .acoes-anexo .acao-anexo.acao-cancelar-upload{
+                        display: none;
+                    }
+                }
+  
+                //Se for um anexo que está sendo enviado agora, iniciar sem o ícone de sucesso
+                .dz-image .info-anexo .icon-sucesso{
+                    display: none;
+                }
+  
+                //Estilos em caso de erro
+                &.dz-error{
+                    //Na Apresentação inicial do anexo, mostrar ícone de erro
+                    .dz-image .info-anexo .icon-erro{
+                        display: inline-block;
+                    }
+  
+                    //Nos detalhes, o nome e tamanho do anexo ficam invisíveis e a mensagem de erro aparece
+                    .dz-details .info-anexo {
+                        .nome-anexo, .tamanho-anexo{
+                            display: none;
+                        }
+                        .msg-erro{
+                            display: block;
+                        }
+                    }
+                }
+  
+                //Estilos em caso de sucesso
+                &.dz-success{
+                    //Na Apresentação inicial do anexo, mostrar ícone de sucesso
+                    .dz-image .info-anexo .icon-sucesso{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+  }

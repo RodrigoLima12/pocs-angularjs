@@ -1,0 +1,8 @@
+{
+  "auth": {
+    "url": "https://auth.nasajon.qa/auth",
+    "realm": "QA",
+    "clientId": "meutrabalho_api"
+  },
+  "contaURL": "https://conta.nasajon.qa"
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="msapplication-config" content="none" />
+  <meta name="google" content="notranslate">
+  <link rel="icon"
+    href="https://s3.sa-east-1.amazonaws.com/imagens.nasajon/logos/nasajon/nova-marca/logo_nasajon_icone.ico">
+  <title>Pocs Angularjs</title>
+  <base href="/">
+</head>
+
+<body fixed-sidebar ng-controller="AppController as ctrl" translate="no" class="notranslate">
+
+  <div class="nsj-app-load">
+    <div class="load-area">
+      <div class="app-load-icon"></div>
+    </div>
+  </div>
+
+  <div id="wrap">
+    <nsj-header ng-if="$root.carregouProfile" user-service="Usuarios">
+      <navbar-logo
+        data-src="https://s3.sa-east-1.amazonaws.com/cdn.nasajon/wp-content/uploads/2021/12/07001729/logo-ana-independente.svg">
+      </navbar-logo>
+      <navbar-text data-module="Pocs Angularjs" data-system=""></navbar-text>
+      <navbar-dropdown>
+        <header-provisoes class="header-provisoes" ng-if="usuario.nome" maintext="usuario.nome" subtext="usuario.email"
+          use-url-v2="true">
+        </header-provisoes>
+      </navbar-dropdown>
+    </nsj-header>
+
+    <nsj-menu>
+      <nsj-menu-list>
+        <!-- Home -->
+        <nsj-menu-item
+          ui-sref-active="active-line"
+          data-icon="fas fa-fw fa-home"
+          data-label="Página inicial"
+          data-link="home"
+        >
+        </nsj-menu-item>
+      </nsj-menu-list>
+      <!-- Configurações -->
+      <nsj-menu-list-bottom>
+        <nsj-menu-item
+          ui-sref-active="active-line"
+          data-icon="fas fa-fw fa-cog"
+          data-label="Configurações"
+          item-dropdown
+        >
+        </nsj-menu-item>
+      </nsj-menu-list-bottom>
+    </nsj-menu>
+
+    <div class="container-fluid main-container" ng-cloak>
+      <toaster-container
+        toaster-options="{'time-out': 3000, 'close-button': true, 'animation-class': 'toast-top-center'}">
+      </toaster-container>
+      <div class='geral clearfix' ui-view>
+        <div id="divFull" class="divFullSize">
+          <p class="text-center article-loading height-full p-loading-center" ng-class="{'onloading' : true }"
+            ng-if="true">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

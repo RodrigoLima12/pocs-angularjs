@@ -1,0 +1,32 @@
+<div class="modal-header">
+	<h3 class="modal-title" id="modal-title">Cancelar Solicitação</h3>
+</div>
+<div class="modal-body" id="modal-body">
+	<div class="row">
+		<div class="col-md-12 top-buffer">
+			<div class="alert nsj-alert alert-warning alert-dismissible">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true"><i class="fas fa-times"></i></span>
+				</button>
+				<div class="aviso">
+					<i class="fas fa-exclamation-triangle fa-fw"></i>
+					<div><strong>Atenção!</strong> <br>
+						Após o cancelamento não será mais possível reverter a ação.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	Você tem certeza que deseja cancelar a {{$ctrl.tipoSolicitacaoTexto}}?
+</div>
+<div class="modal-footer">
+
+	<a class="btn btn-sm btn-default" ng-click="$ctrl.close()">
+		<i class="fa fa-times" aria-hidden="true"></i>
+		Anular
+	</a>
+	<a class="btn btn-sm btn-primary" ng-click="$ctrl.confirmar()" ng-disabled="">
+		<i class="fa fa-check" aria-hidden="true"></i>
+		Sim, Cancelar
+	</a>
+</div>
