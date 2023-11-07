@@ -1,0 +1,71 @@
+<div class="padding-content">
+  <form
+    nsj-focus name="ctrl_form.form"
+    novalidate="novalidate"
+    role="form"
+    ng-class="{
+      'content-scroll': 'list' === 'table',
+      'nsj-loading-page' : ctrl_form.busy
+    }"
+  >
+    <div class="row">
+      <div class="col-md-12 clearfix">
+        <nsj-headline headline-title="Novo cadastro" headline-sub="true" class="hidden-xs">
+          <div class="pull-right">
+            <button
+              type="button"
+              ng-disabled="ctrl_form.form.$invalid"
+              class="btn btn-sm btn-primary btn-save btn-geral margin-left-5"
+              ng-click="ctrl_form.salvar()"
+            >
+              <i class="fas fa-check"></i> Salvar
+            </button>
+            <a class="btn btn-sm btn-default margin-left-5" ng-click="ctrl_form.descartar()">
+              <i class="fa fa-times" aria-hidden="true"></i>
+              Descartar
+            </a>
+          </div>
+        </nsj-headline>
+
+        <div class="headline-mobile hidden-sm hidden-md hidden-lg">
+          <span class="headline-title-mobile">
+          <a uib-tooltip="Voltar">
+            <i class="fas fa-angle-left"></i>
+          </a> Novo cadastro
+          </span>
+        </div>
+        <nav class="fixed-bottom hidden-sm hidden-md hidden-lg footer-fixed-mobile">
+          <div class="btn-mobile-group btn-footer-mobile">
+            <button
+              type="button"
+              ng-disabled="ctrl_form.form.$invalid"
+              class="btn btn-sm btn-primary btn-save btn-geral margin-left-5"
+              ng-click="ctrl_form.salvar()"
+            >
+              <i class="fas fa-check"></i>
+              Salvar
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-default margin-left-5"
+              ng-click="ctrl_form.descartar()"
+            >
+              <i class="fa fa-times" aria-hidden="true"></i>
+              Descartar
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- formulário externo -->
+    <div ng-transclude></div>
+
+    <div class="content-loading" ng-if="ctrl_form.busy">
+      <div class="center-loading text-center">
+        <div class="onloading"></div>
+        Carregando...
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,59 @@
+.label-status{
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    &.active,&.ativo{
+      background-color: #19b04f;
+      color:#fff;
+    }
+    &.desligado{
+        background-color: #7f7f7f !important;
+        color: #FFF !important;
+    }
+    &.ferias{
+        background-color: #0399d8 !important;
+    }
+    &.licenca-medica{
+        background-color: #E76E0B !important;
+    }
+    &.acidente-trabalho{
+        background-color: #A38A8A !important;
+    }
+    &.licenca-maternidade{
+        background-color: #CE0C6D !important;
+    }
+    &.licenca-paternidade{
+        background-color: #095370 !important;
+    }
+    &.servico-militar{
+        background-color: #078F25 !important;
+    }
+    &.mandato-sindical{
+        background-color: #694816 !important;
+    }
+    &.licenca-sem-vencimentos{
+        background-color: #4C5805 !important;
+    }
+    &.qualificacao{
+        background-color: #023D55 !important;
+    }
+    &.carcere{
+        background-color: #253338 !important;
+    }
+    &.suspenso{
+        background-color: #D83503 !important;
+    }
+    &.mandato-eleitoral{
+        background-color: #4EA513 !important;
+    }
+    &.cessao{
+        background-color: #8D8F0A !important;
+    }
+    &.invalidez{
+        background-color: #4B5F1C !important;
+    }
+    &.outros{
+        background-color: #0F4E3B !important;
+    }
+}

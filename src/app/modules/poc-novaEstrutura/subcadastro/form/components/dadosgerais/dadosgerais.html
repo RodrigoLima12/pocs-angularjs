@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <div class="form-group">
+      <label>Nome<span class="form-obrigatorio">*</span></label>
+      <input
+        class="input form-control"
+        type="text"
+        name="nome"
+        placeholder="Informe..."
+        pattern="^[A-Za-z'áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
+        maxlength="70"
+        ng-model="$ctrl.entity.nome"
+        ng-disabled="$ctrl.action==='show'"
+        ng-required="true"
+      />
+      <div ng-if="$ctrl.form.nome.$error.required && ($ctrl.form.nome.$dirty || $ctrl.form.$submitted)">
+        <div class="alert alert-danger" role="alert">
+          <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+          <span class="sr-only">Erro:</span>
+          Informe o nome
+        </div>
+      </div>
+      <div ng-if="$ctrl.form.nome.$invalid && !$ctrl.form.nome.$error.required">
+        <div class="alert alert-danger" role="alert">
+          <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+          <span class="sr-only">Erro:</span>
+          Nome inválido
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <div class="form-group">
+      <label>E-mail<span class="form-obrigatorio">*</span></label>
+      <input
+        class="input form-control"
+        id="email"
+        name="email"
+        type="email"
+        pattern=".+@.+(\..+)+"
+        placeholder="Informe..."
+        maxlength="100"
+        ng-model="$ctrl.entity.email"
+        ng-disabled="$ctrl.action === 'show'"
+        ng-required="true"
+      />
+      <div ng-messages="$ctrl.form.email.$error" ng-if="$ctrl.form.email.$dirty || $ctrl.form.$submitted">
+        <div class="alert alert-danger" role="alert" ng-message="required">
+          <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+          Informe o e-mail
+        </div>
+      </div>
+      <div ng-messages="$ctrl.form.email.$error" ng-if="$ctrl.form.email.$dirty || $ctrl.form.$submitted">
+        <div class="alert alert-danger" role="alert" ng-message="email">
+          <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+          E-mail em formato inválido
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

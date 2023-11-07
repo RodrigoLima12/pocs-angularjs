@@ -7,6 +7,7 @@ import { appRoutes } from './app.routes';
 import { AppController } from './app.controller';
 
 import { HomeModule } from './modules/Home/home.module';
+import { NovaestruturaModule } from 'modules/poc-novaEstrutura/novaestrutura.module';
 import { ConfirmarModalModule } from './shared/components/confirmar.modal/confirmar.modal.module';
 import { nsGoogleanalytics } from './shared/directives/googleanalytics/nsgoogleanalytics.module';
 import { ModulosHabilitados } from './shared/services/moduloshabilitados/moduloshabilitados.service'
@@ -30,6 +31,7 @@ export const app = angular.module('main',
     'multipleDatePicker',
     'nasajon-ui',
     HomeModule,
+    NovaestruturaModule,
     ConfirmarModalModule,
     nsGoogleanalytics,
     permissoes.name,

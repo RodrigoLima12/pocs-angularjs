@@ -1,0 +1,50 @@
+.headline-fixed-ordensservicos{
+    display: flex;
+    align-items: baseline;
+    float: left;
+    flex-direction: column;
+    color:$custom-color-2;
+    margin-bottom: 12px;
+    & li{
+        font-size: 12px;
+    }
+    & a{
+        color:$custom-color-2;
+    }
+    & label{
+        margin-left: 5px;
+    }
+    @media screen and (max-width:767px) {
+        margin-bottom: 8px;
+    }
+}
+
+.fixed-nsj-back{
+    font-size: 20px;
+    vertical-align: middle;
+    margin: 0px 10px 0 0px;
+    line-height: 12px;
+    & a{
+        text-decoration: none !important;
+    }
+}
+
+.nsj-headline{
+    padding-bottom: 0;
+}
+
+.nsj-breadcrumb > li:last-child{
+    color: #aaaa;
+}
+
+@media screen and (max-width: $max-xs) {
+    .hidden-sub-xs{
+        display: none;
+    }
+   
+}
+@media screen and (max-width: $max-sm) {
+    .hidden-sub-sm{
+        display: none;
+    }
+}

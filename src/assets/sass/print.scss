@@ -1,0 +1,185 @@
+/*
+* APPLICATION VARIABLE
+*/
+/* ESTASA */
+// $custom-color-1: #00947d;
+// $custom-color-2: #00473c;
+// $custom-color-3: #e4642f;
+// $custom-color-4: #942b00;
+
+/* BAP */
+// $custom-color-1: #0066A5;
+// $custom-color-2: #114171;
+// $custom-color-3: #D84E16;
+// $custom-color-4: #0084D6;
+
+//Bootstrap
+@import '~bootstrap/dist/css/bootstrap.css';
+
+// FontAwesome
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
+$custom-color-1: #30C01E;
+$custom-color-2: #5a5a5a;
+$custom-color-3: #ffa800;
+$custom-color-4: #30C01E;
+
+
+/*
+* NASAJON UI
+*/
+@import '~nasajon-ui/lib/nasajon-ui.scss';
+@import '~nasajon-ui/lib/theme.scss';
+
+
+/*
+* APPLICATION CSS
+*/
+@import 'templates/global';
+@import 'templates/components/components';
+@import 'templates/components/icons';
+@import 'templates/components/badges';
+@import 'templates/components/dropzone';
+@import 'templates/components/headline';
+@import 'templates/components/ckeditor';
+@import 'others';
+
+@media print {
+
+
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        text-shadow: none !important;
+        filter: none !important;
+       -ms-filter: none !important;
+       transition: none !important;
+    }
+
+    body {
+        margin:0 !important;
+        padding:0 !important;
+        line-height: 1.4em !important;
+        height: auto !important;
+    }
+
+    .print {
+        display: block;
+    }
+
+    .no-print {
+        display: none ;
+    }
+
+    @for $i from 1 through 12 {
+        .col-print-#{$i} {
+            width: #{percentage(round($i*8.33)/100)} !important;
+            float: left !important;
+        }
+    }
+
+    .no-padding {
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+    }
+
+    .custom-padding {
+        padding-right: 3px !important;
+        padding-left: 3px !important;
+      }
+
+
+    @page {
+        size: auto !important;
+        margin: 0 !important;
+    }
+
+
+
+    //*Copiados do style.scss*//
+
+    .geral {
+        background: #fafafa !important;
+        -webkit-print-color-adjust: exact;
+
+    }
+
+    .content-scroll {
+        overflow-y: hidden !important;
+    }
+
+    .scrollable {
+        overflow-y: hidden !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+    }
+
+    .nsj-panel .panel-body {
+        padding: 5px !important;
+    }
+
+
+    .alert-warning {
+        color: #8a6d3b !important;
+        background-color: #fcf8e3 !important;
+        border-color: #faebcc !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .nsj-panel .panel-heading {
+        background: #fff !important;
+        border-color: #ddd !important;
+        -webkit-print-color-adjust: exact;
+
+    }
+
+    .nsj-form-view label {
+        background: #ececec !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+
+    .nsj-panel .panel-content.nsj-form-view .row.row-form-view .col-lg-6 .form-group label {
+        border-right: 1px solid #ddd !important;
+        font-weight: 400 !important;
+        background: #EAEAEA !important;
+        -webkit-print-color-adjust: exact;
+
+    }
+
+    .text-danger {
+        color: #c9302c !important;
+    }
+
+    .nsj-panel {
+        border-color: #ddd !important;
+        background: #fff !important;
+        -webkit-print-color-adjust: exact;
+
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    .table-bordered thead tr th.td-middle {
+        background-color: #EAEAEA !important;
+        border: 1px solid #ddd !important;
+        border-left: 1px solid #ddd ;
+        vertical-align: middle !important;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        -webkit-print-color-adjust: exact;
+    }
+
+
+    .table-bordered {
+        border: 1px solid #ddd !important;
+    }
+
+
+}

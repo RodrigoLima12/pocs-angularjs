@@ -1,0 +1,90 @@
+<div class="nsj-layout">
+  <div class="nsj-aside-list height-full col-md-4">
+    <div class='row height-full'>
+      <div class="panel panel-default height-full" style="padding-top: 15px;">
+        <nsj-headline headline-title="Nova estrutura">
+          <nsj-button
+            color="success"
+            icon="fa fa-plus"
+            size="sm"
+            custom-class="hidden-xs pull-right"
+            ui-sref="novaestruturaNew()"
+          >
+            Criar
+          </nsj-button>
+          <nsj-button
+            color="success"
+            format="fixed circle"
+            icon="fa fa-plus"
+            btn-size="lg"
+            custom-class="hidden-sm hidden-md hidden-lg"
+            ui-sref="novaestruturaNew()"
+          >
+            <span class="hidden-xs">Criar</span>
+          </nsj-button>
+        </nsj-headline>
+
+        <div class="panel-body body-list margin-top-15">
+          <div
+            class="list-group"
+            id="ctrl_index"
+            infinite-scroll-disabled='ctrl_index.busy'
+            infinite-scroll-distance='1'
+          >
+            <a
+              class="list-group-item"
+              ui-sref-active="active"
+              ui-sref='ctrl_index({solicitacao : entity.solicitacao})'
+              ng-repeat="entity in ctrl_index.entities"
+              ng-click='ctrl_index.showEntity(entity)'
+            >
+              <div style="margin: 0 15px">
+                <div class="row">
+                  <p class="list-group-item-text">
+                    <strong>Nome:</strong>
+                    {{ entity.nome }}
+                  </p>
+                </div>
+                <div class="row">
+                  <p class="list-group-item-text">
+                    <strong>email:</strong>
+                    {{ entity.email }}
+                  </p>
+                </div>
+              </div>
+            </a>
+            <p class="text-center nfound" ng-if="ctrl_index.entities.length === 0 && !ctrl_index.busy">
+              Nenhum cadastro encontrado
+            </p>
+            <div
+              class="text-center article-loading height-full"
+              ng-class="{'onloading' : ctrl_index.busy}"
+              ng-if="ctrl_index.busy"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="empty-page empty-page-no-top-padding col-md-8 article-area height-full padding-h-clear" ui-view>
+    <div class="bt-new-article new-article message text-center height-full hidden-xs">
+      <span class="center initial-msg vertical-buttons">
+        <div class="icon-view">
+          <i class="fas fa-table"></i>
+        </div>
+        <h3 class="titulo-pagina-vazia"
+          ng-if="ctrl_index.entities.length !== 0">Visualize um cadastro</h3>
+        <p class="subtitulo-pagina-vazia">
+          Selecione um cadastro no painel ao lado para visualizar as suas informações
+        </p>
+        <a
+          class="btn btn-md btn-success"
+          ui-sref="meurh_solicitacoesrescisoes_new()"
+        >
+          <i class="fas fa-plus"></i>
+          Criar
+        </a>
+      </span>
+    </div>
+  </section>
+</main>

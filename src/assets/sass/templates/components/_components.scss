@@ -1,0 +1,258 @@
+.list-icon {
+    list-style: none;
+    padding: 0;
+
+    li {
+        position: relative;
+
+        span {
+            padding-left: 20px;
+        }
+
+        .icon {
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+    }
+}
+
+.custom-list-group {
+
+    >.list-items {
+        padding-left: 0;
+        max-height: 320px;
+        overflow-y: scroll;
+    }
+
+    li {
+        display: block;
+        border-bottom: 1px solid #ddd;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        a {
+            margin: 0;
+            padding: 0;
+            border: 0;
+
+            &.addSubentity {
+                margin-top: 4px;
+            }
+        }
+
+        .form-control {
+            width: calc(100% - 150px);
+        }
+
+        .ui-select-container.ui-select-bootstrap.dropdown {
+            width: calc(100% - 150px);
+            float: left;
+
+            .form-control {
+                width: 100%;
+            }
+
+            .ui-select-match.ng-scope {
+                width: 100%;
+            }
+        }
+
+        .btn-circle {
+            margin: 0 10px;
+        }
+
+        >ul {
+            padding: 0;
+            clear: both;
+
+            li {
+                padding-left: 90px;
+                // padding-right:45px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-left: -50px;
+                margin-right: -15px;
+
+                &:last-child {
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+
+                &:first-child {
+                    border-top: 1px solid #ddd;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    .list-foot {
+        padding: 5px 10px;
+
+    }
+}
+
+.form-inline {
+    .field-small {
+        width: 70px;
+    }
+}
+
+.nsj-responsive-tabs {
+    div.nsj-form-view {
+        div.bottom-buffer {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-top: none;
+            padding-bottom: 15px;
+        }
+    }
+
+    @media(max-width:$max-xs) {
+        .nav {
+            &.nav-tabs {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.form-inline {
+
+    .ui-select-container {
+        @media(min-width:$min-sm) {
+            width: 400px;
+            display: inline-block;
+
+            .form-control {
+                width: 100%;
+            }
+        }
+    }
+
+    .field-lg {
+        @media(min-width:$min-sm) {
+            width: 320px;
+        }
+    }
+}
+
+.custom-menu-select {
+    >a {
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.avaliacao {
+    .avaliacao-0 {
+        background: #d81923;
+        color: #fff;
+    }
+
+    .avaliacao-1 {
+        background: #f61522;
+        color: #fff;
+    }
+
+    .avaliacao-2 {
+        background: #ff501b;
+        color: #fff;
+    }
+
+    .avaliacao-3 {
+        background: #fe7010;
+        color: #fff;
+    }
+
+    .avaliacao-4 {
+        background: #ffa901;
+        color: #fff;
+    }
+
+    .avaliacao-5 {
+        background: #fecb00;
+        color: #fff;
+    }
+
+    .avaliacao-6 {
+        background: #f5dc02;
+        color: #fff;
+    }
+
+    .avaliacao-7 {
+        background: #ece728;
+        color: #fff;
+    }
+
+    .avaliacao-8 {
+        background: #bed803;
+        color: #fff;
+    }
+
+    .avaliacao-9 {
+        background: #a4cf15;
+        color: #fff;
+    }
+
+    .avaliacao-10 {
+        background: #0bb445;
+        color: #fff;
+    }
+}
+
+.dropdown-menu {
+    &.dropdown-right {
+        right: 0;
+        left: unset;
+    }
+
+    li.dropdown-sec {
+        color: #959595;
+        padding: 0px 10px 3px;
+        font-size: 11px;
+    }
+}
+
+.panel {
+    &.panel-default {
+        box-shadow: none;
+    }
+}
+
+.custom-dropzone {
+    border: 1px dashed #ccc;
+    background: none;
+
+    ul {
+        list-style: none;
+    }
+
+    .text {
+        font-size: 17px;
+        text-align: center;
+        width: 245px;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+.popover-auto {
+    max-width: none;
+}
+
+// Código para corrigir quebra e/ou não exibição do conteúdo completo nas páginas
+@media (min-width: 768px) {
+    body .main-container .geral {
+        margin-left: 50px;
+        width: calc(100% - 50px);
+    }
+}

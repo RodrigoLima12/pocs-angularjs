@@ -1,0 +1,84 @@
+[class^="nsj-ico-"] {
+    content: " ";
+    width:10px; 
+    height:10px;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+#arquivos_list{
+    .icon.fa {
+        font-size: 18px;
+        margin-left: 2px;
+    }
+    .active{
+        .icon.fa {
+            color:#fff;
+        }
+
+    }
+}
+
+.nsj-ico-excel{
+    background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/excel_20x20.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.nsj-ico-image{
+    background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/image_20x20.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.nsj-ico-word{
+    background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/word_20x20.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.nsj-ico-powerpoint{
+    background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/powerpoint_20x20.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.nsj-ico-text{
+    background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/text_20x20.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.nsj-ico-pdf{
+    background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/pdf_20x20.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.active{
+    .nsj-ico-excel{
+        background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/excel_20x20-B.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .nsj-ico-image{
+        background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/image_20x20-B.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .nsj-ico-word{
+        background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/word_20x20-B.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .nsj-ico-powerpoint{
+        background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/powerpoint_20x20-B.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .nsj-ico-text{
+        background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/text_20x20-B.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .nsj-ico-pdf{
+        background: url('https://s3-us-west-2.amazonaws.com/static.nasajon/img/common/icos-arquivos/pdf_20x20-B.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
