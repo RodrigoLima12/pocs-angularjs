@@ -9,6 +9,7 @@ export class NovaestruturaFormComponent implements ng.IComponentOptions {
   static transclude = true;
 
   static bindings = {
+    form: '=',
     entity: '=',
     busy: '=',
     action: '<'

@@ -1,8 +1,18 @@
-<novaestrutura-form-component>
+<novaestrutura-form-component
+  form='ctrl_new.form'
+  entity='ctrl_new.entity'
+  busy='ctrl_new.busy'
+  action='ctrl_new.action'
+>
   <div class="col-sm-12">
     <div class="margin-top-15">
       <nsj-accordion init-open="true" headline="Dados gerais">
-        <dadosgerais-component />
+        <dadosgerais-component
+          form='ctrl_new.form'
+          entity='ctrl_new.entity'
+          busy='ctrl_new.busy'
+          action='ctrl_new.action'
+        />
       </nsj-accordion>
     </div>
   </div>

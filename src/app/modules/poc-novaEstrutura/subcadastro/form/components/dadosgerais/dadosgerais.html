@@ -10,7 +10,7 @@
         pattern="^[A-Za-z'áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
         maxlength="70"
         ng-model="$ctrl.entity.nome"
-        ng-disabled="$ctrl.action==='show'"
+        ng-disabled="$ctrl.action === 'show'"
         ng-required="true"
       />
       <div ng-if="$ctrl.form.nome.$error.required && ($ctrl.form.nome.$dirty || $ctrl.form.$submitted)">

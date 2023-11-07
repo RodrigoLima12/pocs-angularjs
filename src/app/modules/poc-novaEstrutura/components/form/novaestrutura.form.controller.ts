@@ -17,12 +17,12 @@ export class NovaestruturaFormController implements ng.IController {
   public form: ng.IFormController;
   public action: 'new' | 'edit' | 'show';
 
-  public busy: boolean = true;
+  public busy: boolean;
 
   constructor(
-    private $scope: ng.IScope,
-    private $state: angular.ui.IStateService,
-    private novaestruturaServiceBase: NovaestruturaServiceBase
+    protected $scope: ng.IScope,
+    protected $state: angular.ui.IStateService,
+    protected novaestruturaServiceBase: NovaestruturaServiceBase
   ) { }
 
   public async salvar(): Promise<void> {
@@ -31,7 +31,7 @@ export class NovaestruturaFormController implements ng.IController {
     if (this.form.$valid && confirmacao) {
       this.busy = true;
       const id = await this.novaestruturaServiceBase.save(this.entity);
-      this.$state.go('', { id })
+      this.$state.go('novaestrutura')
       this.busy = false;
       this.$scope.$applyAsync();
     }
